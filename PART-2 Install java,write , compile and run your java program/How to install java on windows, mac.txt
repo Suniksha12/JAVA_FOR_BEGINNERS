@@ -1,0 +1,55 @@
+How to install java on windows, mac and linux :
+
+Here are the steps to install Java on your computer:
+For Windows:
+	1. Download Java:
+		○ Visit the official Oracle Java website: https://www.oracle.com/java/technologies/javase-downloads.html.
+		○ Download the latest Java Development Kit (JDK) for Windows.
+	2. Run the Installer:
+		○ Double-click the downloaded .exe file to start the installation.
+		○ Follow the on-screen instructions to complete the setup.
+	3. Set Environment Variables:
+		○ Open the Start Menu, search for "Environment Variables," and select "Edit the system environment variables."
+		○ Under the System Properties dialog, click the Environment Variables button.
+		○ In the System Variables section, find Path, and click Edit.
+		○ Add the directory path of the Java bin folder (e.g., C:\Program Files\Java\jdk-xx\bin) to the list.
+	4. Verify Installation:
+		○ Open the Command Prompt (cmd), and type: 
+java -version
+		○ If Java is installed successfully, it will display the Java version.
+
+For macOS:
+	1. Download Java:
+		○ Visit the official Oracle Java website and download the latest JDK for macOS.
+	2. Install Java:
+		○ Open the .dmg file and follow the installation instructions.
+	3. Set JAVA_HOME:
+		○ Open the Terminal and add the following line to your shell configuration file (e.g., .zshrc or .bash_profile): 
+export JAVA_HOME=$(/usr/libexec/java_home)
+		○ Save the file and reload your shell: 
+source ~/.zshrc
+	4. Verify Installation:
+		○ In the Terminal, type: 
+java -version
+		○ You should see the installed Java version.
+
+For Linux (Ubuntu/Debian):
+	1. Update the System:
+sudo apt update
+	2. Install Java:
+		○ To install OpenJDK: 
+sudo apt install openjdk-11-jdk
+
+(Replace 11 with your desired version if needed.)
+	3. Set JAVA_HOME:
+		○ Find the Java installation path: 
+sudo update-alternatives --config java
+		○ Add the path to the .bashrc file: 
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export PATH=$JAVA_HOME/bin:$PATH
+		○ Reload the .bashrc file: 
+source ~/.bashrc
+	4. Verify Installation:
+java -version
+
+Let me know if you need more help with any specific step! 😊
